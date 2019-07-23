@@ -29,7 +29,7 @@ def subscribe_intent_callback(hermes, intentMessage):
     action_wrapper(hermes, intentMessage, conf)
 
 
-def action_wrapper(hermes, intentMessage, conf):
+def action_wrapper(hermes, intent_Message, conf):
     print('[Received] intent: {}'.format(intent_message.intent.intent_name))
     
     #define message to be sent to the speech synthesis engine
@@ -58,5 +58,4 @@ def action_wrapper(hermes, intentMessage, conf):
 if __name__ == "__main__":
     mqtt_opts = MqttOptions()
     with Hermes(mqtt_options=mqtt_opts) as h:
-        h.subscribe_intent("carlasailer:anrufen", subscribe_intent_callback) \
-         .start()
+        h.subscribe_intent("carlasailer:anrufen", subscribe_intent_callback).start()
