@@ -29,7 +29,7 @@ def subscribe_intent_callback(hermes, intentMessage):
     action_wrapper(hermes, intentMessage, conf)
 
 
-def action_wrapper(hermes, intent_Message, conf):
+def action_wrapper(hermes, intent_message, conf):
     print('[Received] intent: {}'.format(intent_message.intent.intent_name))
     
     #define message to be sent to the speech synthesis engine

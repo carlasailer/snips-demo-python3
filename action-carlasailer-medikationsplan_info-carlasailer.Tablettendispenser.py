@@ -29,7 +29,7 @@ def subscribe_intent_callback(hermes, intentMessage):
     action_wrapper(hermes, intentMessage, conf)
 
 
-def action_wrapper(hermes, intentMessage, conf):
+def action_wrapper(hermes, intent_message, conf):
     print('[Received] intent: {}'.format(intent_message.intent.intent_name))
     
     message_to_tts = 'Ich gebe dir gerne Informationen zu deinen Medikamenten.'
